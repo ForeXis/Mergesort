@@ -36,3 +36,24 @@ void array_print(const data *a, uint64_t n) {
     printf("%u\t", a[i]);
   printf("\n");
 }
+
+data* merge(const data *a, uint64_t a_n,
+            const data *b, uint64_t b_n) {
+  data *res = malloc((a_n + b_n) * sizeof(data));
+  uint64_t i = 0, j = 0;
+
+  while((i < a_n) && (j < b_n))
+    if(a[i] <= b[j]) {
+      res[i + j] = a[i];
+      ++i;
+    } else {
+      res[i + j] = b[j];
+      ++j;
+    }
+  for(; i < a_n; ++i)
+    res[i + j] = a[i];
+  for(; j < b_n; ++j)
+    res[i + j] = b[j];
+
+  return res;
+}
