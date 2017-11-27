@@ -57,3 +57,10 @@ data* merge(const data *a, uint64_t a_n,
 
   return res;
 }
+
+void merge_sort(data *a, uint64_t n) {
+  if(n < 2)
+    return;
+
+ 
+}
