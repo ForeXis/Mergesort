@@ -11,5 +11,8 @@ uint64_t len;
 int main(void) {
   printf("Array length: ");
   scanf("%lu", &len);
+ 
+ 
+   return 0;
   }
 
