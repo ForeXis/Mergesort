@@ -28,7 +28,7 @@ CTEST(suite1, test1){
   
   for(uint64_t i = 0; i < len; ++i){
   	printf("compare %d %d =? %d\n", i , b[i], arr[i]);
-  ASSERT_EQUAL(b[i], arr[i]);
+  ASSERT_EQUAL(arr[i], b[i]);
   
 
   }
