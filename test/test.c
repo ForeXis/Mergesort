@@ -13,7 +13,7 @@ data *arr;
 CTEST(suite1, test1){
 
   // Given
-   uint64_t arr[20] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 45, 49, 63, 65, 81, 86, 94, 99};
+   uint64_t arr[20] = {0, 1, 7, 3, 18, 9, 23, 25, 27, 32, 27, 36, 45, 49, 63, 65, 81, 86, 94, 99};
   const uint64_t len = 20;
   
  
@@ -28,7 +28,7 @@ CTEST(suite1, test1){
   
   for(uint64_t i = 0; i < len; ++i){
   	printf("compare %d %d =? %d\n", i , b[i], arr[i]);
-  ASSERT_EQUAL(arr[i], b[i]);
+  ASSERT_EQUAL(b[i], arr[i]);
   
 
   }
