@@ -45,28 +45,13 @@ CTEST(suite2, test2){
 
   // Then
   for(uint64_t i = 0, j = 1; i < len; ++i){
-  	if (arr[i] < arr[i+1]){
+  	if (arr[i] <= arr[i+1]){
   		j++ ;
 	  }
 }
 
   	printf("compare %d =? %d\n", i , j);
   ASSERT_EQUAL(i, j);
-}
-  
-  
-
-
-
-
-  
-  for(uint64_t i = 0; i < len; ++i){
-  	printf("compare %d %d =? %d\n", i , b[i], arr[i]);
-  ASSERT_EQUAL(b[i], arr[i]);
-  
-
-  }
-  
 }
   
 
